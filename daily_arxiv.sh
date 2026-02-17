@@ -13,9 +13,7 @@ echo "$(date): parsing"
 uv run python parse_arxiv.py > papers.txt
 echo "$(date): running claude ($(wc -l < papers.txt) lines)"
 
-PROMPT=$(cat CLAUDE.md)
-
-RESULT=$(cat papers.txt | claude -p "$PROMPT" --model sonnet --output-format text)
+RESULT=$(cat PROMPT.md papers.txt | claude --model opus --output-format text)
 echo "$(date): claude done, sending mail"
 /opt/homebrew/bin/msmtp -t <<EOF
 To: t@tmy.se
