@@ -6,7 +6,8 @@
 # remove old data
 git clean
 # Download today's new astro-ph submissions
-curl -s "https://arxiv.org/list/astro-ph/new" -o arxiv_new.html
+# A browser User-Agent is required; a bare curl gets served a stripped page with only 1 entry.
+curl -s -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36" "https://arxiv.org/list/astro-ph/new" -o arxiv_new.html
 ```
 
 ## Parsing Papers

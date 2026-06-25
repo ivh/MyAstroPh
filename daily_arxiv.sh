@@ -8,7 +8,7 @@ cd /Users/tom/astro-ph
 
 echo "$(date): starting"
 git clean -f
-curl -s "https://arxiv.org/list/astro-ph/new" -o arxiv_new.html
+curl -s -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36" "https://arxiv.org/list/astro-ph/new" -o arxiv_new.html
 echo "$(date): parsing"
 uv run python parse_arxiv.py > papers.txt
 echo "$(date): running claude ($(wc -l < papers.txt) lines)"

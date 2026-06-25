@@ -30,7 +30,3 @@ sense that you don't believe what is claimed. Explain why
 
 For every paper mentioned, include a link to https://arxiv.org/abs/<arxiv_id>
 
----
-
-# Today's Papers
-
